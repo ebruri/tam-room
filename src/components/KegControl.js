@@ -25,12 +25,11 @@ class KegControl extends React.Component {
     const editedMainKegList = this.state.mainKegList
     .filter(keg => keg.id !== this.state.selectedKeg.id)
     .concat(kegToIncrease);   
-    kegToIncrease.pints++; 
-    console.log(kegToIncrease.pints) 
+    if(kegToIncrease.pints < 124){
+      kegToIncrease.pints++;}
     this.setState({
       mainKegList: editedMainKegList,
       editing: false,
-      selectedKeg: null
     });   
   }
   
@@ -70,10 +69,10 @@ class KegControl extends React.Component {
     }
 
   handleClick = () => {
-    if (this.state.selectedKeg != null) {
+    if (this.state.selectedKeg !== null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedkeg: null,
+        selectedKeg: null,
         editing: false
       });
     } else {
@@ -92,7 +91,10 @@ class KegControl extends React.Component {
       buttonText = "Return to Keg List";
     }
     else if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDelete = {this.handleDeletingKeg} onClickingEdit = {this.handleEditClick} onClickingIncrease = {this.handleIncreasePints}/>
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} 
+      onClickingDelete = {this.handleDeletingKeg}
+      onClickingEdit = {this.handleEditClick} 
+      onClickingIncrease = {this.handleIncreasePints}/>
       buttonText = "Return to Keg List";
     }
     else if (this.state.formVisibleOnPage) {
