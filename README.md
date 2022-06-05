@@ -28,7 +28,7 @@ Tap Room is an application that allows users to add, delete and update kegs of b
 
 * Open Terminal
 * Change the current working directory to the location where you want the cloned directory.
-* Type ``git clone https://github.com/ebruri/pizza-parlor``
+* Type ``git clone https://github.com/ebruri/tap-room``
 * Press enter to create your local clone.
 * Install dependancies for the application by using the command $ ``npm install``
 * Run the application by using the command ``npm run start``
