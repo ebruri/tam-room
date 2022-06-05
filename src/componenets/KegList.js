@@ -10,10 +10,10 @@ function KegList(props) {
       {props.kegList.map((keg) =>
         <Log
           whenKegClicked = { props.onKegSelection }
-          birds={log.birds}
-          view={log.view}
-          location={log.location}
-          date={log.date}
+          name={keg.name}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholContent={keg.alcoholContent}
           id={log.id}
           key={log.id}/>
       )}
@@ -21,10 +21,9 @@ function KegList(props) {
   );
 }
 
-// Add propTypes for ticketList.
-LogList.propTypes = {
-  logList: PropTypes.array,
-  onLogSelection: PropTypes.func
+KegList.propTypes = {
+  kegList: PropTypes.array,
+  onKegSelection: PropTypes.func
 };
 
-export default LogList;
+export default KegList;
