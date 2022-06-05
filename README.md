@@ -18,7 +18,7 @@ Tap Room is an application that allows users to add, delete and update kegs of b
 
 ## Component Diagram
 
-![Component Diagram](src/ComponentDiagram.png
+![Component Diagram](src//img/ComponentDiagram.png)
 
 ## GitHub Pages
 
