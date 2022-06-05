@@ -13,7 +13,7 @@ function Keg(props){
   );
 }
 
-Log.propTypes = {
+Keg.propTypes = {
   name: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.number,
